@@ -1,0 +1,17 @@
+{
+	"0": {
+	  "Name": "Machado",
+	  "Texture": "Machado.png",
+	  "Description": "Um machado capenga"
+	},
+	"1": {
+	  "Name": "Machado De Ouro",
+	  "Texture": "MachadoOuro.png",
+	  "Description": "Um machado d'or"
+	},
+	"2": {
+	  "Name": "Tridente",
+	  "Texture": "Tridente.png",
+	  "Description": "Um tridente"
+	}
+}

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://gu3r6s25fp8"]
+
+[ext_resource type="Texture2D" uid="uid://d00cjlk5t2yji" path="res://Weapons_Free.png" id="1_wyaid"]
+[ext_resource type="Script" path="res://weapons_free.gd" id="2_7upud"]
+
+[node name="WeaponsFree" type="Sprite2D"]
+position = Vector2(98, 366)
+texture = ExtResource("1_wyaid")
+region_enabled = true
+region_rect = Rect2(2, 113, 13, 13)
+script = ExtResource("2_7upud")
