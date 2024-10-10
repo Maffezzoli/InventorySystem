@@ -2,6 +2,7 @@ extends ItemList
 @onready var item_icon: TextureRect = $"../ItemIcon"
 @onready var label: Label = $"../Label"
 
+
 func add_slot(ID = "0"):
 	var item_texture = load("res://Assets/" + ItemData.get_texture_name(ID))
 	var item_name
@@ -25,8 +26,9 @@ func _input(event: InputEvent) -> void:
 		if visible == true:
 			monta()
 			select_first()
-
-
+	if event.is_action_pressed("ui_accept"):
+		print("progresso salvo!")
+		ItemData.salva_inv(ItemData.save_atual)
 func _on_item_selected(index: int) -> void:
 	if get_selected_items().size() > 0:
 		var item_name = get_item_text(get_selected_items()[0])
