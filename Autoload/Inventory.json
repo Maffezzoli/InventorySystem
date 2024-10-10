@@ -2,16 +2,22 @@
 	"0": {
 	  "Name": "Machado",
 	  "Texture": "Machado.png",
-	  "Description": "Um machado capenga"
+	  "Description": "Um machado capenga",
+	  "Qtd": 2,
+	  "Agrupa": true
 	},
 	"1": {
 	  "Name": "Machado De Ouro",
 	  "Texture": "MachadoOuro.png",
-	  "Description": "Um machado d'or"
+	  "Description": "Um machado d'or",
+	  "Qtd": 0,
+	  "Agrupa": false
 	},
 	"2": {
 	  "Name": "Tridente",
 	  "Texture": "Tridente.png",
-	  "Description": "Um tridente"
+	  "Description": "Um tridente",
+	  "Qtd": 3,
+	  "Agrupa": false
 	}
 }

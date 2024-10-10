@@ -16,7 +16,11 @@ func get_item_name(ID = "0"):
 	
 func get_item_description(ID = "0"):
 	return content[ID]["Description"]
-	
+
+func get_item_qtd(ID = "0"):
+	return content[ID]["Qtd"]
+func get_item_agrupa(ID = "0"):
+	return content[ID]["Agrupa"]
 func find_item_key_by_name(name_: String) -> String:
 	for key in content.keys():
 		var item = content[key]
