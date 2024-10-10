@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvhdr1nicqja3"]
+[gd_scene load_steps=2 format=3 uid="uid://cvhdr1nicqja3"]
 
 [ext_resource type="Script" path="res://Inventory/inventory.gd" id="1_ea3qm"]
-[ext_resource type="PackedScene" uid="uid://do5gpmjpox4xm" path="res://abstract_item.tscn" id="2_76wrg"]
 
 [node name="Teste" type="Node2D"]
 
@@ -12,7 +11,10 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 451.0
+offset_left = 502.0
+offset_top = 132.0
+offset_right = -153.0
+offset_bottom = -436.0
 grow_horizontal = 2
 grow_vertical = 2
 icon_scale = 0.0
@@ -31,9 +33,6 @@ offset_right = 434.0
 offset_bottom = 572.0
 
 [node name="DevTool" type="CanvasLayer" parent="UI"]
-
-[node name="AbstractItem" parent="." instance=ExtResource("2_76wrg")]
-position = Vector2(532, 296)
 
 [connection signal="item_clicked" from="UI/Inventory" to="UI/Inventory" method="_on_item_clicked"]
 [connection signal="item_selected" from="UI/Inventory" to="UI/Inventory" method="_on_item_selected"]

@@ -24,13 +24,8 @@ func _input(event: InputEvent) -> void:
 		clear()
 		if visible == true:
 			monta()
-			if item_count > 0:
-				grab_focus()
-				select(0)
-				_on_item_selected(0)
-			else:
-				item_icon.texture = null
-				label.text = "Inventário Vazio!"
+			select_first()
+
 
 func _on_item_selected(index: int) -> void:
 	if get_selected_items().size() > 0:
@@ -52,10 +47,12 @@ func _on_item_clicked(index: int, at_position: Vector2, mouse_button_index: int)
 		set_item_text(get_selected_items()[0], new)
 		if ItemData.get_item_qtd(ID) == 0:
 			remove_item(get_selected_items()[0])
+			select_first()
 	else:
 		ItemData.exclui_item(ID)
 		remove_item(get_selected_items()[0])
-func monta():
+		select_first()
+func monta() -> void:
 	for itens in ItemData.content:
 		if ItemData.content[itens]["Qtd"] > 0:
 			if ItemData.content[itens]["Agrupa"]:
@@ -63,8 +60,16 @@ func monta():
 			else:
 				for i in range(ItemData.content[itens]["Qtd"]):
 					add_slot(itens)
-func formatar_string(old: String):
+func formatar_string(old: String) -> String:
 	var pos = old.find(" X")  # Encontra a posição de " X"
 	if pos != -1:
 		return old.substr(0, pos)  # Retorna a parte da string antes de " X"
 	return old  # Se " X" não for encontrado, retorna a string original
+func select_first() -> void:
+	if item_count > 0:
+		grab_focus()
+		select(0)
+		_on_item_selected(0)
+	else:
+		item_icon.texture = null
+		label.text = "Inventário Vazio!"
